@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+Digite a resposta da questão:
+<input/>
+<button>Verificar</button>
+
+<script>
+	var input = document.querySelector("input");
+	input.focus();
+
+	var valor = 5;
+	function verifica() {
+	if(input.value == valor) {
+		alert("VOCÊ ACERTOU.")
+	} else {
+		alert("VOCÊ ERROU.")
+	}
+	input.value = "";
+	input.focus();
+}
+
+var button = document.querySelector("button");
+button.onclick = verifica;
+
+document.write("<br><br>")
+document.write("Foi difícil?")
+</script>

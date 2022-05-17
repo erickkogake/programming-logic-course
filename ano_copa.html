@@ -1,0 +1,66 @@
+<meta charset="UTH-8">
+
+<script>
+	function pulaLinha() {
+		document.write("<br><br>")
+	}
+	function mostra(frase) {
+		document.write(frase)
+		pulaLinha();
+	}
+
+	var limite = parseInt(prompt("Uma data limite de copa."))
+	var anoCopa = 1930;
+	while(anoCopa <= limite) {
+
+		alert("Teve copa em " + anoCopa);
+		anoCopa = anoCopa + 4;
+	}
+
+	alert("FIM");
+</script>
+
+<script>
+	function pulaLinha() {
+		document.write("<br><br>")
+	}
+	function mostra(frase) {
+		document.write(frase)
+		pulaLinha();
+	}
+
+	var contador = 2;
+
+	while(contador <= 100) {
+		mostra("Número par = " + contador);
+		contador = contador + 2;
+	}
+
+	mostra("Fim.")
+	</script>
+
+	<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoCopa = 1930;
+    var limite = parseInt(prompt("Qual é o ano limite?"));
+
+    while(anoCopa <= limite) {
+
+        mostra(anoCopa + " tem copa!");
+        anoCopa = anoCopa + 4;
+    }
+
+    mostra("Ufa! Esses foram os anos de copa até " + limite);
+</script>

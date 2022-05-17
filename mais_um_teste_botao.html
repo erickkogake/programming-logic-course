@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<h3> Sim ou Não? </h3> <br>
+
+<input/>
+<button>Clique</button>
+
+<script>
+    var input = document.querySelector("input");
+    input.focus();
+    function tchau() {
+        if(input.value == "sim") {
+            alert("Aceitou? huuum. Bora noivar então.")
+        } else {
+       alert("Tchau!, arruma oto.")
+    }
+    input.focus();
+}
+var button = document.querySelector("button");
+button.onclick = tchau;
+
+
+</script>

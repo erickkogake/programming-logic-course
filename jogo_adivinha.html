@@ -1,0 +1,28 @@
+<meta charset="UTH-8">
+
+<script>
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var numeroPensado = Math.round(Math.random() * 10);
+	var limite = 3;
+	var tentativas = 1;
+	while(tentativas <= limite) {
+		var chute = parseInt(prompt("Vamos ver se você é bom no chute, digite um número de 1 a 10."));
+
+		if(chute == numeroPensado) {
+		mostra("Você acertou o número pensado." +"<br><br>" + "Parabéns abestado.")
+		break;
+		} else {
+		mostra("Shiiiii, você está ruim de chute.");
+		}
+		tentativas++;
+}
+
+mostra("fim")
+</script>

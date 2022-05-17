@@ -1,0 +1,35 @@
+<meta charset="UTH-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var vitorias = parseInt(prompt("Entre com o número de vitórias"));
+
+    var empates = parseInt(prompt("Entre com o número de empates"));
+
+    var pontos = (vitorias * 3) + empates;
+
+    mostra("Os pontos do seu time é " + pontos);
+
+    if(pontos > 30) {
+        mostra("O Flamengo está melhor que o ano passado no Brasileirão")
+    }        
+
+    if(pontos < 30) {
+        mostra("O Flamengo está pior que o ano passado no Brasileirão")
+    }
+
+    if(pontos ==30) {
+        mostra("O Flamengo está a mesma coisa que o ano passado no Brasileirão")
+    }
+
+    </script>

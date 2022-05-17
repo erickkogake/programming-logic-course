@@ -1,0 +1,21 @@
+<meta charset="UTH-8">
+
+<script>
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	} 
+
+	var limite = 0;
+	var numeros = 20;
+	while(numeros >= 0) {
+		mostra("Beleza, número menor que 20 = " + numeros);
+		numeros = numeros - 1;
+	}
+
+	mostra("FIM");
+
+	</script>

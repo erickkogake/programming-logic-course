@@ -1,0 +1,87 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+<script> 
+
+    function sorteia() {
+        return Math.round(Math.random() * 10)
+    }
+
+    function sorteiaNumeros(quantidade) {
+        // variável quantidade representa a quantidade de números que serão sorteados
+
+
+        var segredos = [];
+
+        // variável número representa a quantidade de números que já foram sorteados em determinado momento
+        var numero = 1;
+
+        // enquanto a quantidade digitada pelo usuário for maior ou igual ao número de números sorteados, sorteia
+        while(numero <= quantidade) { 
+
+            var numeroAleatorio = sorteia();
+            var achou = false;
+
+            // verifica se o número é diferente de 0
+            if (numeroAleatorio !== 0) {
+
+                // para cada posição no array de segredos, executa o bloco FOR
+                for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+                    // se a posição 'posicao' no array de segredos for igual ao número aleatório gerado, quebra a função for, e continua a execução. Neste caso está indo para o fim do for e vai executar o bloco if(achou == false)
+                    if(segredos[posicao] == numeroAleatorio){   
+                        achou = true;
+                        break;
+                    }
+
+                }
+
+                // se achou == false (não é um número repetido no array de segredos), então inclui o número gerado no array de segredos e incrementa a variável 'numero'
+                if (achou == false) {
+                    segredos.push(numeroAleatorio);
+                    numero++;
+                }
+            }
+        }
+
+        return segredos;
+
+        }
+
+        var segredos = sorteiaNumeros(5);
+
+        console.log(segredos);
+
+        var input = document.querySelector("input");
+        input.focus();
+
+        function verifica() {
+
+           var achou = false;
+
+           for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+                  if(input.value == segredos[posicao]) {
+
+                         alert("Você ACERTOU!");
+                         achou = true;
+                         break;
+                  } 
+           }
+
+           if(achou == false) {
+
+                  alert("Você ERROU!");
+           }
+
+           input.value = "";
+           input.focus();
+
+         }
+
+        var button = document.querySelector("button");
+
+        button.onclick = verifica;
+
+</script>

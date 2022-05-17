@@ -1,0 +1,25 @@
+<meta charset="UTH-8">
+
+<script>
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	} 
+
+	var numeros = 30;
+	while(numeros <= 40) {
+		if(numeros == 33) {
+			numeros = numeros + 1;
+		}
+		if(numeros == 37) {
+			numeros = numeros + 1;
+		} else {
+			mostra("Segue sequência do número = " + numeros);
+			numeros = numeros + 1;
+		}
+	}
+
+	</script>
